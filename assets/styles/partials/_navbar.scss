@@ -1,0 +1,16 @@
+.navbar {
+    background-color: $black;
+    display: flex;
+    height: 50px;
+    font-family: $main-font;
+    border-bottom: 1px solid white;
+    align-items: center;
+
+    #navbar-logo {
+        display: block;
+        height: 40px;
+        width: 186px;
+        background-image: url('/assets/images/logo_nav.png');
+        margin-left: 20px;
+    }
+}
