@@ -2,3 +2,10 @@
 @import "partials/_base";
 @import "partials/_navbar";
 @import "partials/_footer";
+@import "home";
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('/public/build/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+
+}

@@ -1,4 +1,4 @@
-$main-font: Josefin Sans;
+$main-font: 'Josefin Sans';
 $black: #030300;
 $blue: #0057E5;
 $dark-blue: #003B5C;
@@ -9,6 +9,7 @@ $salmon: #EC894D;
 $red: #E50000;
 $pink: #E641B6;
 
-* {
+html {
     background-color: $black;
+    font-family: $main-font;
 }

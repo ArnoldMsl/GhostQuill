@@ -14,6 +14,12 @@ Encore
     // only needed for CDN's or subdirectory deploy
     //.setManifestKeyPrefix('build/')
 
+    .copyFiles({
+        from: './assets/fonts',
+        to: 'fonts/[name].[ext]'
+    })
+
+
     /*
      * ENTRY CONFIG
      *
