@@ -1,4 +1,32 @@
 .title {
+    display: flex;
     font-family: $main-font;
+    font-weight: bold;
     color: white;
+    font-size: 2rem;
+    width: 600px;
+    margin-top: 70px;
+    margin-left: 20px;
+    padding: 20px;
+    border-left: solid white 3px;
+    border-top: solid white 3px;
+}
+
+#main-pres {
+    color: white;
+    border-left: solid white 3px;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-left: 20px;
+    width: 500px;
+
+    span {
+        font-weight: bold;
+    }
+
+    #link-write {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
 }
