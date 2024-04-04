@@ -4,15 +4,39 @@
 
 {% block body %}
 
-<h1 class="title">Bienvenue sur GhostQuill, le site de partage d'écrits anonymes</h1>
+<div Id="home-container">
 
-<p ID="main-pres"><span>Exprimez vous !</span><br /><br /> Parce que nous pensons que chacun a quelque chose à écrire, 
-    nous choisissons d'offrir un espace d'expression qui ne nécessite aucune inscription, 
-    ni aucune donnée personnelle.<br /> <br />
+    <div id="pres-container">
 
-    Vous pouvez commencer par consulter un texte aléatoire de la communauté en choisissant une catégorie <br /><br />
+        <h1 class="title">Bienvenue sur GhostQuill, le site de partage d'écrits anonymes</h1>
 
-    Inspiré ? alors commencez à <a href="{{ path('home') }}" id="link-write" aria-label="écrire un texte">écrire</a> !
-</p>
+        <h2 class="subtitle">Exprimez vous !</h2>
+        <p ID="main-pres">Parce que nous pensons que chacun a quelque chose à écrire, 
+            nous choisissons d'offrir un espace d'expression qui ne nécessite aucune inscription, 
+            ni aucune donnée personnelle.<br /> <br />
 
+            Vous pouvez commencer par consulter un texte aléatoire de la communauté en choisissant une catégorie. <br /><br />
+
+            Inspiré ? alors commencez à <a href="{{ path('home') }}" id="link-write" aria-label="écrire un texte">écrire</a> !
+        </p>
+
+    </div>
+
+    <div id="wheel">
+        <div class="circle-segment"></div>
+        <div class="circle-segment"></div>
+        <div class="circle-segment"></div>
+        <div class="circle-segment"></div>
+        <div class="circle-segment"></div>
+        <div class="circle-segment"></div>
+        <div class="circle-segment"></div>
+        <div class="circle-segment"></div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/build/scripts/circle.js"></script>
 {% endblock %}

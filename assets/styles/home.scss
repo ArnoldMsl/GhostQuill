@@ -1,32 +1,82 @@
-.title {
-    display: flex;
-    font-family: $main-font;
-    font-weight: bold;
-    color: white;
-    font-size: 2rem;
-    width: 600px;
-    margin-top: 70px;
-    margin-left: 20px;
-    padding: 20px;
-    border-left: solid white 3px;
-    border-top: solid white 3px;
-}
+#home-container {
 
-#main-pres {
-    color: white;
-    border-left: solid white 3px;
-    font-size: 1.5rem;
-    padding: 20px;
-    margin-left: 20px;
-    width: 500px;
+    display: inline-flex;
+    padding: 70px;
 
-    span {
-        font-weight: bold;
+    #pres-container {
+
+        display: block;
+
+        .title {
+            display: flex;
+            font-family: $main-font;
+            font-weight: bold;
+            color: white;
+            font-size: 2rem;
+            width: 600px;
+            margin-left: 20px;
+            padding: 20px;
+            border-left: solid white 3px;
+            border-top: solid white 3px;
+        }
+
+        .subtitle {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-left: solid white 3px;
+            font-size: 1.5rem;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        #main-pres {
+            color: white;
+            border-left: solid white 3px;
+            font-size: 1.5rem;
+            padding: 20px;
+            margin-left: 20px;
+            width: 500px;
+
+            span {
+                font-weight: bold;
+            }
+
+            #link-write {
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
     }
 
-    #link-write {
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
+    #wheel {
+        width: 35vw;
+        height: 35vw;
+        margin-left: 5vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        .circle-segment {
+            position: absolute;
+            height: 40%;
+            width: 36%;
+            background-size: cover;
+        }
+    }
+
+    #wheel::before {
+        width: 43%;
+        height: 43%;
+        content: "";
+        border-radius: 50%;
+        border: solid $black;
+        border-width: 20%;
+        background-color: $black;
+        background-image: url('/public/build/images/write-btn-dsk.png');
+        background-size: cover;
     }
 }
