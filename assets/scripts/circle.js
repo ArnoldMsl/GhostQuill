@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // if (window.innerWidth > 425) {
     const segments = document.getElementsByClassName('circle-segment');
     const texts = document.getElementsByClassName('circle-segment-text');
 
@@ -17,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
         element.style.backgroundImage = `url('/build/images/wheel-segment${i + 1}.svg')`;
     }
 
+
+
     for (let i = 0; i < segments.length; i++) {
         let angle = (((Math.PI * 2) / segments.length) * i + 22.46);
         console.log(texts.length);
@@ -24,4 +28,5 @@ document.addEventListener('DOMContentLoaded', function () {
         positionText(texts[i], i);
         backgroundSegment(segments[i], i);
     }
+    // }
 });

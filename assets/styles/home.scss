@@ -12,7 +12,7 @@
             font-family: $main-font;
             font-weight: bold;
             color: white;
-            font-size: 2rem;
+            font-size: 3vw;
             width: 600px;
             margin-left: 20px;
             padding: 20px;
@@ -22,10 +22,9 @@
 
         .subtitle {
             color: white;
-            font-size: 1.5rem;
+            font-size: 2vw;
             font-weight: bold;
             border-left: solid white 3px;
-            font-size: 1.5rem;
             padding: 20px;
             margin-left: 20px;
         }
@@ -33,7 +32,7 @@
         #main-pres {
             color: white;
             border-left: solid white 3px;
-            font-size: 1.5rem;
+            font-size: 1.5vw;
             padding: 20px;
             margin-left: 20px;
             width: 500px;
@@ -53,12 +52,26 @@
     #wheel {
         width: 35vw;
         height: 35vw;
-        margin-left: 5vw;
+        margin-left: 11vw;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+
+        #circle-center {
+            width: 43%;
+            height: 43%;
+            border-radius: 50%;
+            background-color: $black;
+            background-image: url('/public/build/images/write-btn-dsk.png');
+            background-size: cover;
+            box-shadow: 0 0 15px 1px rgba(255, 255, 255, 1);
+        }
+
+        #circle-center:hover {
+            box-shadow: 0 0 25px 8px rgba(255, 255, 255, 1);
+        }
 
         .circle-segment {
             position: absolute;
@@ -78,8 +91,8 @@
 
             #circle-segment-text1 {
                 margin-top: 25%;
-
             }
+
 
             #circle-segment-text2 {
                 margin-top: 22%;
@@ -114,17 +127,233 @@
             }
 
         }
-    }
 
-    #wheel::before {
-        width: 43%;
-        height: 43%;
-        content: "";
-        border-radius: 50%;
-        border: solid $black;
-        border-width: 20%;
-        background-color: $black;
-        background-image: url('/public/build/images/write-btn-dsk.png');
-        background-size: cover;
+        .circle-segment:hover {
+            height: 42%;
+            width: 38%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #home-container {
+
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 0 auto;
+        width: 100%;
+        justify-content: center;
+
+        #pres-container {
+
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .title {
+                border-left: solid white 0px;
+                border-top: solid white 0px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 2vw;
+                padding-bottom: 2vw;
+                text-align: center;
+                width: 90%;
+                font-size: 4vw;
+            }
+
+            .subtitle {
+                border-left: solid white 0px;
+                padding: 0px;
+                margin: 0px;
+                text-align: center;
+                width: 100%;
+                padding-bottom: 2vw;
+                font-size: 3vw;
+            }
+
+            #main-pres {
+                border-left: solid white 0px;
+                padding: 0px;
+                margin: 0 auto;
+                text-align: center;
+                width: 70%;
+                font-size: 2.5vw;
+
+
+                span {
+                    font-weight: bold;
+                }
+
+                #link-write {
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        #wheel {
+            margin-top: 7vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 7vw;
+            height: 55vw;
+            width: 55vw;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #home-container {
+
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        width: 90vw;
+        justify-content: center;
+
+        #pres-container {
+
+            display: block;
+            flex-direction: column;
+            width: 90vw;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            justify-content: center;
+
+            .title {
+                border-left: solid white 0px;
+                border-top: solid white 0px;
+                padding-top: 1.5vw;
+                padding-bottom: 1.5vw;
+                text-align: center;
+                font-size: 5vw;
+                font-weight: bold;
+            }
+
+            .subtitle {
+                border-left: solid white 0px;
+                padding: 0px;
+                margin: 0px;
+                text-align: center;
+                width: 100%;
+                padding-top: 1vw;
+                padding-bottom: 1.5vw;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+
+            #main-pres {
+                border-left: solid white 0px;
+                padding: 0px;
+                margin: 0 auto;
+                text-align: center;
+                width: 90%;
+                font-size: 3.5vw;
+
+                span {
+                    font-weight: bold;
+                }
+
+                #link-write {
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        #wheel {
+            width: 70vw;
+            height: 70vw;
+            margin-top: 10vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 7vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            #circle-center {
+                width: 43%;
+                height: 43%;
+                border-radius: 50%;
+                background-color: $black;
+                background-image: url('/public/build/images/write-btn-dsk.png');
+                background-size: cover;
+                box-shadow: 0 0 15px 1px rgba(255, 255, 255, 1);
+            }
+
+            #circle-center:hover {
+                box-shadow: 0 0 25px 8px rgba(255, 255, 255, 1);
+            }
+
+            .circle-segment {
+                position: absolute;
+                height: 40%;
+                width: 36%;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .circle-segment-text {
+                    color: white;
+                    position: absolute;
+                    font-weight: bold;
+                    font-size: 2vw;
+                }
+
+                #circle-segment-text1 {
+                    margin-top: 25%;
+                }
+
+
+                #circle-segment-text2 {
+                    margin-top: 22%;
+                }
+
+                #circle-segment-text3 {
+                    margin-top: 8%;
+                }
+
+                #circle-segment-text4 {
+                    margin-top: 15%;
+
+                }
+
+                #circle-segment-text5 {
+                    margin-top: 25%;
+                    margin-right: 4%;
+                }
+
+                #circle-segment-text6 {
+                    margin-top: 25%;
+                    margin-right: 5%;
+                }
+
+                #circle-segment-text7 {
+                    margin-top: 20%;
+                }
+
+                #circle-segment-text8 {
+                    margin-right: 2%;
+                    margin-top: 20%;
+                }
+
+            }
+
+            .circle-segment:hover {
+                height: 42%;
+                width: 38%;
+            }
+        }
     }
 }
