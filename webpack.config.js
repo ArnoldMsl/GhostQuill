@@ -1,4 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -13,6 +14,21 @@ Encore
     .setPublicPath('/build')
     // only needed for CDN's or subdirectory deploy
     //.setManifestKeyPrefix('build/')
+
+    .copyFiles({
+        from: './assets/fonts',
+        to: 'fonts/[name].[ext]'
+    })
+
+    .copyFiles({
+        from: './assets/images',
+        to: 'images/[name].[ext]'
+    })
+
+    .copyFiles({
+        from: './assets/scripts',
+        to: 'scripts/[name].[ext]'
+    })
 
     // Tailwind CSS
     .enablePostCssLoader()
@@ -37,6 +53,18 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
+
+    .addPlugin(new BrowserSyncPlugin({
+        proxy: 'http://localhost:8000', // Symfony local server URL
+        files: [
+            'assets/**/*.js',
+            'assets/**/*.jsx',
+            'assets/**/*.css',
+            'templates/**/*.html.twig'
+        ],
+        reloadDelay: 0
+    }))
+
 
     /*
      * FEATURE CONFIG
